@@ -44,7 +44,7 @@ transition={{duration:1,delay:0.6,ease:easeInOut}}
           </div>
         </div>
         <div className="w-1/2">
-          <img src="public/outfit-img3.jpeg" alt="fitFinder App" className="w-full h-auto" />
+          <img src="/outfit-img3.jpeg" alt="fitFinder App" className="w-full h-auto" />
         </div>
       </div>
       {/* Product Categories */}
@@ -53,7 +53,7 @@ transition={{duration:1,delay:0.6,ease:easeInOut}}
         <div className="bg-gradient-to-r from-pink-200 to-orange-100 p-8 rounded-lg">
           <div className="flex gap-8">
             <div className="w-3/4">
-              <img src="public/outfit-img2.jpeg" alt="Outfit Collection" className="w-full h-auto rounded-lg" />
+              <img src="/outfit-img2.jpeg" alt="Outfit Collection" className="w-full h-auto rounded-lg" />
               <h3 className="text-3xl font-bold mb-8 text-pink-700 mt-4">SEASONAL OUTFITS</h3>
               <div className="flex justify-center mt-4 space-x-4">
                 <button className="text-gray-800 hover:text-black">Spring</button>
@@ -63,7 +63,7 @@ transition={{duration:1,delay:0.6,ease:easeInOut}}
               </div>
             </div>
             <div className="w-1/4">
-              <img src="public/outfit-img1.jpeg" alt="Clothing Items" className="w-full h-auto rounded-lg" />
+              <img src="/outfit-img1.jpeg" alt="Clothing Items" className="w-full h-auto rounded-lg" />
               <h3 className="text-2xl font-semibold text-pink-500 mt-4">OCCASION OUTFITS</h3>
               <a href="#" className="text-orange-500 hover:underline">TRY NOW</a>
             </div>
