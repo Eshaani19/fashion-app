@@ -1,11 +1,19 @@
 import React from 'react'
 import NavBar from './NavBar'
+import { motion, useScroll } from "framer-motion"
 
 const LandingPage = () => {
+  const {scrollYProgress} = useScroll()
   return (
     <div className=' h-screen w-full bg-gray-100'> 
-      <div className="bg-gray-100 min-h-screen"></div>
+      <div className="bg-gray-100 h-screen relative w-full  ">
+      <motion.div
+      style={{scaleX:scrollYProgress}}
+       className='h-28 w-full bg-orange-600 fixed origin-left z-20  '>
+</motion.div>
+      </div>
        <NavBar/>
+    
        <div className="container mx-auto flex h-[calc(100vh-88px)] mt-24">
         <div className="w-1/2 flex items-center justify-center relative">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-orange-100 opacity-50"></div>
