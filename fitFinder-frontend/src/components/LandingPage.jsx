@@ -1,20 +1,40 @@
 import React from 'react'
 import NavBar from './NavBar'
-import { motion, useScroll } from "framer-motion"
+import { easeInOut, motion, useScroll } from "framer-motion"
 
 const LandingPage = () => {
   const {scrollYProgress} = useScroll()
   return (
-    <div className=' h-screen w-full bg-gray-100'> 
-      <div className="bg-gray-100 h-screen relative w-full  ">
+    <div className=' h-screen w-full '> 
+    <NavBar/>
+      <div className=" h-screen relative w-full text-black  ">
       <motion.div
       style={{scaleX:scrollYProgress}}
        className='h-28 w-full bg-orange-600 fixed origin-left z-20  '>
 </motion.div>
+<div className='h-full w-full flex items-center justify-center flex-col'>
+<motion.h1
+initial={{opacity:0}}
+animate={{opacity:1}}
+transition={{duration:1,ease:easeInOut}}
+drag
+dragDirectionLock="true"
+dragConstraints={{left:0,right:0,top:0,bottom:0}}
+ className='text-9xl font-sans font-bold '>
+  FitFinder
+
+</motion.h1>
+<motion.h4
+initial={{opacity:0}}
+animate={{opacity:1}}
+transition={{duration:1,delay:0.6,ease:easeInOut}}
+ className='text-5xl font-extralight'>Dress with AI</motion.h4>
+</div>
+
       </div>
-       <NavBar/>
+       
     
-       <div className="container mx-auto flex h-[calc(100vh-88px)] mt-24">
+       <div data-scroll data-scroll-speed="-0.1" className="container mx-auto flex h-[calc(100vh-88px)] mt-24 rounded-lg border-t-4" >
         <div className="w-1/2 flex items-center justify-center relative">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-orange-100 opacity-50"></div>
           <div className="relative z-10 text-center px-8">
@@ -28,7 +48,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* Product Categories */}
-      <div className="container mx-auto py-16 mt-24">
+      <div  data-scroll data-scroll-speed="0.3" className="container mx-auto py-16 mt-24">
         <h2 className="text-3xl font-bold mb-8 text-orange-700">CLOTHING COLLECTIONS</h2>
         <div className="bg-gradient-to-r from-pink-200 to-orange-100 p-8 rounded-lg">
           <div className="flex gap-8">
