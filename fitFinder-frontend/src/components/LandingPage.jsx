@@ -30,10 +30,7 @@ animate={{opacity:1}}
 transition={{duration:1,delay:0.6,ease:easeInOut}}
  className='text-5xl font-extralight'>Dress with AI</motion.h4>
 </div>
-
       </div>
-       
-    
        <div data-scroll data-scroll-speed="-0.1" className="container mx-auto flex h-[calc(100vh-88px)] mt-24 rounded-lg border-t-4" >
         <div className="w-1/2 flex items-center justify-center relative">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-orange-100 opacity-50"></div>
