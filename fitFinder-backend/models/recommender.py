@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
-# Load product data from CSV
+# Load product data from CSV files
 products_df = pd.read_csv('data/products.csv')
 
 # Dummy function for generating recommendations
