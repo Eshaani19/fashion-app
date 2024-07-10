@@ -2,9 +2,12 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
 from models.recommender import get_recommendations
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Handle Cross-Origin Resource Sharing (CORS)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/users.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -41,5 +44,7 @@ def get_products():
     return products_df.to_json(orient='records')
 
 if __name__ == '__main__':
-    db.create_all()
+    # Create the database and the database table
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
