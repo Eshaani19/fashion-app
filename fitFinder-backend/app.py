@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
 from models.recommender import get_recommendations
@@ -46,17 +46,22 @@ def login():
         return jsonify({'message': 'Login successful'})
     return jsonify({'message': 'Invalid credentials'}), 401
 
-@app.route('/recommend', methods=['POST'])
-def recommend():
-    data = request.json
-    user_preferences = data.get('preferences')
-    recommendations = get_recommendations(user_preferences)
-    return jsonify(recommendations)
-
-@app.route('/data/products', methods=['GET'])
-def get_products():
-    products_df = pd.read_csv('data/products.csv')
-    return products_df.to_json(orient='records')
+@app.route('/recommendations', methods=['POST'])
+def recommendations():
+    try:
+        data = request.json
+        category = data.get('category')
+        if not category:
+            return jsonify({'error': 'Category is required'}), 400
+        recommendations = get_recommendations(category, model)
+        return jsonify(recommendations)
+    except Exception as e:
+        app.logger.error(f"Error in /recommendations: {e}")
+        return jsonify({'error': 'Internal Server Error'}), 500
+    
+@app.route('/images/<path:filename>')
+def send_image(filename):
+    return send_from_directory('/Users/eshaaniarvind/fashion-app/fitFinder-backend/data/images', filename)
 
 if __name__ == '__main__':
     # Create the database and the database table
