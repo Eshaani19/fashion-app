@@ -1,6 +1,29 @@
 product_id,product_name,category,price,image_url
-1,Red Dress,Dresses,49.99,https://example.com/red-dress.jpg
-2,Blue Jeans,Jeans,39.99,https://example.com/blue-jeans.jpg
-3,White Shirt,Shirts,19.99,https://example.com/white-shirt.jpg
-4,Black Skirt,Skirts,29.99,https://example.com/black-skirt.jpg
-5,Green Jacket,Jackets,59.99,https://example.com/green-jacket.jpg
+1,blueshirt,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blueshirt-formal.jpeg
+2,blackblazer,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blackblazer-formal.jpeg
+3,jeans,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/jeans-casual.jpeg
+4,blue,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blue-casual.jpeg
+5,whitesneakers,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/whitesneakers-casual.jpeg
+6,bluetie,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/bluetie-formal.jpeg
+7,blueskirt,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blueskirt-formal.jpeg
+8,blackblazerset,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blackblazerset-formal.jpeg
+9,blacktshirt,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blacktshirt-casual.jpeg
+10,bluesweater,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/bluesweater-formal.jpeg
+11,blackpumps,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blackpumps-formal.jpeg
+12,bluedress,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/bluedress-formal.jpeg
+13,BlackPants,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/BlackPants-formal.jpeg
+14,denimshorts,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/denimshorts-casual.jpeg
+15,printedskirt,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/printedskirt-casual.jpeg
+16,brownsweater,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/brownsweater-formal.jpeg
+17,whiteshirt,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/whiteshirt-formal.jpeg
+18,greenjacket,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/greenjacket-casual.jpeg
+19,colorfultop,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/colorfultop-casual.jpeg
+20,beigesweatshirt,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/beigesweatshirt-casual.jpeg
+21,blackshoes,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blackshoes-formal.jpeg
+22,browncoat,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/browncoat-formal.jpeg
+23,blacksweatshirt,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blacksweatshirt-casual.jpeg
+24,reddress,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/reddress-formal.jpeg
+25,yogapants,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/yogapants-casual.jpeg
+26,blacktop,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/blacktop-casual.jpeg
+27,rainjacket,casual,0.0,/Users/eshaaniarvind/Desktop/image-data/images/rainjacket-casual.jpeg
+28,bag,formal,0.0,/Users/eshaaniarvind/Desktop/image-data/images/bag-formal.jpeg
