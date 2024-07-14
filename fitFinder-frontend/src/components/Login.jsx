@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const Login = ({ handleLogin }) => {
+const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const [isError, setIsError] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,16 +20,13 @@ const Login = ({ handleLogin }) => {
           const data = await response.json();
 
           if (response.ok) {
-            setMessage(data.message);
-            setIsError(false);
-            handleLogin();
+            onLoginSuccess();
             setTimeout(() => navigate('/'), 2000); // Navigate after 2 seconds
           } else {
-            setMessage(data.message || 'Login failed');
-            setIsError(true);
+            toast.error(data.message || 'Login failed');
           }
     }catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+        toast.error('Failed to connect to the server');
       }
   };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -17,13 +18,17 @@ const Signup = () => {
             body: JSON.stringify({ username, password }),
           });
           const data = await response.json();
-          console.log(data.message);
-          if (data.message === 'User created successfully') {
-              navigate('/login');
+          if (response.ok) {
+            onSignupSuccess();
+            navigate('/');
+          } else {
+            toast.error(data.message || 'Signup failed');
+            console.error('Signup error:', data);
           }
-    }catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
-      }
+    } catch (error) {
+      toast.error('Failed to connect to the server');
+      console.error('Connection error:', error);
+    }
   };
 
   return (
