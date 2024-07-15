@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Fashion Outfit Picker is a web application designed to help users choose outfits based on the occasion. By leveraging a curated machine learning model, the application categorizes images of clothes into categories such as casual, formal, and more. This allows users to save time and make informed decisions when selecting their outfits. Future versions aim to include features for managing and selecting outfits from the users' own closet.
+Fit Finder is a web application designed to help users choose outfits based on the occasion. By leveraging a curated machine learning model, the application categorizes images of clothes into categories such as casual, formal, and more. This allows users to save time and make informed decisions when selecting their outfits. Future versions aim to include features for managing and selecting outfits from the users' own closet.
 
 ## Features
 
@@ -35,14 +35,14 @@ Fashion Outfit Picker is a web application designed to help users choose outfits
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/fashion-outfit-picker.git
-   cd fashion-outfit-picker
+   git clone https://github.com/your-username/fashion-app.git
+   cd fashion-app
    ```
 
 2. Set up the backend:
 
    ```bash
-   cd backend
+   cd fitFinder-backend
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
@@ -52,7 +52,7 @@ Fashion Outfit Picker is a web application designed to help users choose outfits
 3. Set up the frontend:
 
    ```bash
-   cd frontend
+   cd fitFinder-frontend
    npm install
    npx vite
    ```
